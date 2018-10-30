@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<fcntl.h>
-//I THINK IT WORKS FIRST TIME IT RUNS IT MATCHES!!!!
+//it always works!!!
 int randNum(){
   int c;
   int file = open("/dev/random",O_RDONLY);
