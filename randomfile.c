@@ -15,10 +15,10 @@ int main(void) {
     printf("What is arr[%d]??:%d\n",i,arr[i]);
   }
   int file=open("file.txt",O_WRONLY | O_CREAT);
-  write(arr,sizeof(int),sizeof(arr),file);
+  write(file,&arr,sizeof(int)*10);
   close(file);
   int file2=open("file.txt",O_RDONLY);
-  read(arr,sizeof(int),sizeof(arr),file2);
+  read(file2,&arr,sizeof(int)*10);
   close(file2);
   return 0;
 }
